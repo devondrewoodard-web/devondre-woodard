@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Devondre Woodard — AI Automation &amp; GTM Engineer</title>
+<meta name="description" content="Devondre Woodard builds growth and automation systems with AI: outbound prospecting, paid acquisition, ticketing integrations and always-on services. QA and sales background at Intuit QuickBooks and Hertz.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Devondre Woodard — AI Automation & GTM Engineer">
+<meta property="og:description" content="Systems that find buyers, start conversations and report what really happened — tested like a QA engineer.">
+<meta property="og:url" content="https://devondrewoodard-web.github.io/devondre-woodard/">
+<meta property="og:image" content="https://devondrewoodard-web.github.io/devondre-woodard/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Devondre Woodard, AI Automation and GTM Engineer">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://devondrewoodard-web.github.io/devondre-woodard/">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1'%3E%3Cstop offset='0' stop-color='%23FF6A2B'/%3E%3Cstop offset='.5' stop-color='%23FF2E7E'/%3E%3Cstop offset='1' stop-color='%239B5CFF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='7' fill='url(%23g)'/%3E%3Ctext x='16' y='21.5' font-family='Arial,sans-serif' font-size='14' font-weight='700' fill='%23fff' text-anchor='middle'%3EDW%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Bricolage Grotesque";src:url(fonts/bricolage.woff2) format("woff2");font-weight:200 800;font-stretch:75% 100%;font-display:swap}
+@font-face{font-family:"IBM Plex Mono";src:url(fonts/plexmono-400.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"IBM Plex Mono";src:url(fonts/plexmono-500.woff2) format("woff2");font-weight:500;font-display:swap}
+
+/* ════════════════════════════════════════════════════════════════════════
+   BASE — the light layout. Print uses this untouched (see @media print);
+   the dark "Pro" look is layered on top inside @media screen further down,
+   so nothing about the two-page PDF depends on the screen design.
+   ════════════════════════════════════════════════════════════════════════ */
+:root{
+  --paper:#ffffff;
+  --ink:#15171b;
+  --ink-2:#454a52;
+  --ink-3:#6f7680;
+  --rule:#dfe2e6;
+  --accent:#cf3f17;
+  --sans:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+*,*::before,*::after{box-sizing:border-box}
+*{margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{display:block;max-width:100%;height:auto}
+ul{list-style:none}
+a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-decoration-color:var(--rule);text-underline-offset:3px}
+a:hover{text-decoration-color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.topnav,#name3d{display:none}
+
+.page{max-width:1120px;margin:0 auto;padding:56px 40px 64px}
+
+/* ── masthead ─────────────────────────────────────────── */
+.mast{display:grid;grid-template-columns:minmax(0,1fr) 248px;gap:48px;align-items:end;padding-bottom:40px}
+.name{font-size:clamp(48px,9vw,108px);font-weight:720;font-stretch:76%;letter-spacing:-.035em;line-height:.9}
+.role{margin-top:14px;font-size:clamp(19px,2vw,24px);font-weight:560;letter-spacing:-.01em;color:var(--accent)}
+.contact{display:flex;flex-wrap:wrap;gap:6px 22px;margin-top:22px;font-family:var(--mono);font-size:13.5px;color:var(--ink-2)}
+.contact .pdf{color:var(--accent);text-decoration-color:currentColor}
+.m-only{display:none}
+.photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px}
+
+/* ── intro ────────────────────────────────────────────── */
+.intro{border-top:2px solid var(--ink);padding:30px 0 44px}
+.statement{font-size:clamp(25px,3.3vw,40px);font-weight:520;line-height:1.13;letter-spacing:-.022em;max-width:23em;text-wrap:balance}
+.lede{margin-top:20px;font-size:18px;color:var(--ink-2);max-width:42em}
+.open{margin-top:22px;font-family:var(--mono);font-size:13px;color:var(--ink-2);line-height:1.7}
+.open span{color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-right:10px}
+
+/* ── sections ─────────────────────────────────────────── */
+.sec{display:grid;grid-template-columns:172px minmax(0,1fr);column-gap:40px;border-top:1px solid var(--ink);padding:26px 0 42px}
+.sec>h2{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding-top:5px}
+
+/* results */
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px 32px}
+.stats>div{border-top:1px solid var(--rule);padding-top:12px}
+.stats dt{font-family:var(--mono);font-weight:500;font-size:clamp(28px,3vw,38px);letter-spacing:-.03em;line-height:1.1;font-variant-numeric:tabular-nums}
+.stats dd{margin-top:6px;font-size:15px;line-height:1.4;color:var(--ink-2)}
+.src{display:block;margin-top:9px;font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3)}
+.src::before{content:"Source  ";color:var(--accent);white-space:pre}
+
+/* selected work */
+.work{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 48px}
+.work article{border-top:1px solid var(--rule);padding-top:14px}
+.kind{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.work h3{margin:6px 0 8px;font-size:21px;font-weight:620;letter-spacing:-.012em;line-height:1.2}
+.work p:not(.kind){font-size:16px;color:var(--ink-2)}
+
+/* experience */
+.job+.job{border-top:1px solid var(--rule);margin-top:20px;padding-top:18px}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.job h3{font-size:22px;font-weight:650;letter-spacing:-.015em}
+.when{font-family:var(--mono);font-size:13px;color:var(--ink-3);white-space:nowrap;font-variant-numeric:tabular-nums}
+.title{font-size:16.5px;font-weight:560}
+.job>.row+.row,.job>.row+.title{margin-top:4px}
+.job ul+.row{margin-top:12px}
+.job ul{margin-top:6px}
+/* Hanging dash without positioning: a positioned <li> is painted after the
+   normal flow, so Chrome writes every bullet at the END of the PDF's text
+   stream and an ATS reads the jobs as empty. Keep bullets in flow. */
+.job li{padding-left:18px;text-indent:-18px;font-size:16px;color:var(--ink-2)}
+.job li+li{margin-top:3px}
+.job li::before{content:"–";display:inline-block;width:18px;text-indent:0;color:var(--ink-3)}
+.skip{position:absolute;left:12px;top:-80px;z-index:100;padding:8px 16px;border-radius:980px;background:#fff;color:#000;font-weight:600;text-decoration:none}
+.skip:focus{top:12px}
+.results{margin-top:14px;font-size:15.5px}
+.results b{font-family:var(--mono);font-weight:500;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-right:10px}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 40px}
+.skills h3{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+.skills p{font-size:15.5px;color:var(--ink-2);line-height:1.5}
+.skills p+p{margin-top:8px}
+.lvl{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.also{grid-column:1/-1;font-size:15.5px;color:var(--ink-2)}
+.also .lvl{display:inline;margin-right:10px}
+
+/* education */
+.edu{font-size:16.5px}
+.edu b{font-weight:620}
+.certs{margin-top:14px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 40px;font-size:15px;color:var(--ink-2)}
+.certs span{color:var(--ink-3)}
+.issued{margin-top:10px;font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3)}
+
+.foot{border-top:1px solid var(--ink);padding-top:16px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;font-family:var(--mono);font-size:12.5px;color:var(--ink-3)}
+
+/* ════════════════════════════════════════════════════════════════════════
+   SCREEN — the dark "Pro" page. Gradient type, glass, lit 3D name (js/hero3d.js)
+   and scroll motion (js/main.js). Everything here is screen-only.
+   ════════════════════════════════════════════════════════════════════════ */
+@media screen{
+  :root{
+    --paper:#000;--ink:#f5f5f7;--ink-2:#a1a1a6;--ink-3:#86868b;--rule:rgba(255,255,255,.12);--accent:#ff6a2b;
+    --spectrum:linear-gradient(100deg,#ff6a2b 0%,#ff2e7e 34%,#9b5cff 67%,#3da9ff 100%);
+    --hair:rgba(255,255,255,.14);
+    color-scheme:dark;
+  }
+  html{background:#000}
+  body{overflow-x:clip;background:
+    radial-gradient(1100px 640px at 10% -6%,rgba(255,106,43,.17),transparent 62%),
+    radial-gradient(980px 660px at 94% 0%,rgba(155,92,255,.20),transparent 62%),
+    radial-gradient(900px 700px at 50% 40%,rgba(61,169,255,.07),transparent 70%) #000;
+    background-repeat:no-repeat}
+  /* film grain: keeps the gradients from reading as flat CSS defaults */
+  body::before{content:"";position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.055;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  a{text-decoration-color:rgba(255,255,255,.28)}
+  a:hover{text-decoration-color:var(--accent)}
+
+  /* one gradient family, used everywhere colour appears */
+  .role,.stats dt,.kind,.sec>h2,.results b{background:var(--spectrum);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+  /* ── translucent nav ── */
+  .topnav{display:flex;align-items:center;justify-content:space-between;gap:16px;position:fixed;top:0;left:0;right:0;z-index:40;height:52px;
+    padding:0 max(20px,calc(50% - 540px));background:rgba(12,12,14,.62);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);
+    border-bottom:1px solid rgba(255,255,255,.08);font-size:13.5px}
+  .topnav a{text-decoration:none;color:var(--ink-2);transition:color .2s}
+  .topnav a:hover{color:var(--ink)}
+  .topnav .brand{color:var(--ink);font-weight:650;letter-spacing:-.01em}
+  .topnav .links{display:flex;align-items:center;gap:22px}
+  .topnav .pdf{color:#000;background:#f5f5f7;border-radius:980px;padding:3px 12px;font-weight:550}
+  .topnav .pdf:hover{color:#000;background:#fff}
+  html.nav-auto .topnav{opacity:0;transform:translateY(-100%);pointer-events:none;transition:opacity .35s ease,transform .5s cubic-bezier(.2,.8,.2,1)}
+  html.nav-auto .topnav.show{opacity:1;transform:none;pointer-events:auto}
+
+  /* ── hero ── */
+  .page{padding-top:0}
+  /* one lockup: the name, then photo + role/proof/contact directly beneath it */
+  .hero{position:relative;min-height:100svh;grid-template-columns:minmax(0,1fr) 200px minmax(0,440px) minmax(0,1fr);grid-template-rows:auto auto;
+    grid-template-areas:"name name name name" ". photo meta .";align-content:center;gap:40px 36px;align-items:center;padding:84px 0 56px}
+  .mast-id{display:contents}
+  #name3d{display:block;position:absolute;top:0;left:50%;width:100vw;height:100%;transform:translateX(-50%);z-index:0;pointer-events:none}
+  .hero .name,.hero-meta,.photo{position:relative;z-index:1}
+  .hero .name{grid-area:name;align-self:center;justify-self:center;text-align:center;font-size:clamp(68px,14.5vw,216px);font-weight:800;font-stretch:75%;
+    letter-spacing:-.045em;line-height:.84;background:var(--spectrum);-webkit-background-clip:text;background-clip:text;color:transparent;
+    filter:drop-shadow(0 1px 0 rgba(130,42,18,.95)) drop-shadow(0 2px 0 rgba(110,30,70,.85)) drop-shadow(0 3px 0 rgba(70,28,110,.75)) drop-shadow(0 4px 0 rgba(30,40,90,.6)) drop-shadow(0 22px 34px rgba(0,0,0,.55));
+    transition:opacity .7s ease}
+  .hero .name .w{display:block}
+  /* once the WebGL name is drawn, the HTML name stays for screen readers only */
+  html.has-3d .hero .name{opacity:0!important}
+  .hero-meta{grid-area:meta}
+  .role{margin-top:0;font-size:clamp(24px,2.3vw,30px);font-weight:650;letter-spacing:-.015em}
+  .proof{display:flex;flex-wrap:wrap;gap:4px 20px;margin-top:12px;font-size:15.5px;line-height:1.5;color:var(--ink-2)}
+  .proof span{white-space:nowrap}
+  .proof b{font-family:var(--mono);font-weight:500;color:var(--ink)}
+  .contact{margin-top:16px;font-size:14.5px}
+  .contact .status{order:-1;flex-basis:100%;font-family:var(--sans);font-size:15.5px;font-weight:550;color:var(--ink)}
+  .contact .pdf{color:#000;background:#f5f5f7;text-decoration:none;border-radius:980px;padding:3px 13px;font-weight:500}
+  .contact .pdf:hover{background:#fff}
+  .photo{grid-area:photo;width:200px;isolation:isolate;padding:6px;border-radius:26px;background:rgba(255,255,255,.06);border:1px solid var(--hair)}
+  .photo::before{content:"";position:absolute;inset:-16px;z-index:-1;border-radius:36px;background:var(--spectrum);filter:blur(40px);opacity:.26}
+  .photo img{border-radius:20px}
+
+  /* ── intro ── */
+  .intro{border-top:0;padding:16vh 0 11vh}
+  .statement{font-size:clamp(32px,5.4vw,76px);font-weight:650;line-height:1.04;letter-spacing:-.032em;max-width:16em}
+  .lede{margin-top:36px;font-size:20px;line-height:1.55}
+  .open{margin-top:28px}
+  .intro-body{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:64px;align-items:center}
+  .work-photo{position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:28px;border:1px solid var(--hair);
+    box-shadow:0 40px 90px -30px rgba(155,92,255,.45),0 20px 60px -30px rgba(255,106,43,.35);margin-top:36px}
+  .work-photo img{width:100%;height:116%;object-fit:cover;margin-top:-8%}
+
+  /* ── companies ── */
+  .logo-rows{display:grid;gap:30px}
+  .logo-label{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-bottom:14px}
+  .logo-list{display:flex;flex-wrap:wrap;align-items:center;gap:26px 48px}
+  .logo-list li{display:flex;align-items:center;gap:8px}
+  .logo-list li>*{opacity:.74;transition:opacity .25s}
+  .logo-list li:hover>*{opacity:1}
+  .lg{display:block;width:auto;max-width:200px}
+  .f-white{filter:brightness(0) invert(1)}
+  .f-inv{filter:grayscale(1) invert(1)}
+  .f-invc{filter:grayscale(1) invert(1) contrast(2.2) brightness(1.3)}
+  .f-bright{filter:grayscale(1) brightness(2.2)}
+  .lg-word span{font-size:22px;font-weight:700;letter-spacing:-.02em;color:#fff;white-space:nowrap}
+  .blend{mix-blend-mode:screen}
+
+  /* ── network ── */
+  .net{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:780px}
+  .net-frame{aspect-ratio:4/5;overflow:hidden;border-radius:24px;border:1px solid var(--hair);
+    box-shadow:0 30px 70px -30px rgba(155,92,255,.35)}
+  .net-frame img{width:100%;height:112%;object-fit:cover;object-position:50% 30%;margin-top:-6%}
+  @media (min-width:641px){.net-photo:not(.wide) .net-frame{aspect-ratio:1/1}}
+  .net-photo.wide{grid-column:1/-1}
+  .net-photo.wide .net-frame{aspect-ratio:16/10}
+  .net figcaption{margin-top:14px;font-size:15px;line-height:1.45;color:var(--ink-2)}
+  .net figcaption b{display:block;margin-bottom:4px;font-family:var(--mono);font-weight:500;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;
+    background:var(--spectrum);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+  /* ── sections ── */
+  .sec{border-top:1px solid var(--hair);padding:36px 0 72px;scroll-margin-top:60px}
+  .sec>h2{font-size:12.5px;align-self:start}
+  .stats{gap:16px}
+  .src{text-wrap:balance}
+  .stats>div{border:1px solid rgba(255,255,255,.09);border-radius:20px;padding:22px 22px 20px;
+    background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.015))}
+  .stats dt{font-size:clamp(28px,3.1vw,44px);background-size:420% 100%;white-space:nowrap}
+  .stats>div:nth-child(1) dt{background-position:0% 0}
+  .stats>div:nth-child(2) dt{background-position:22% 0}
+  .stats>div:nth-child(3) dt{background-position:44% 0}
+  .stats>div:nth-child(4) dt{background-position:66% 0}
+  .stats>div:nth-child(5) dt{background-position:88% 0}
+  .stats>div:nth-child(6) dt{background-position:100% 0}
+  /* the reply rate is the headline: a wider lead tile with a bigger number */
+  @media (min-width:861px){
+    .stats{grid-template-columns:repeat(6,minmax(0,1fr))}
+    .stats>div{grid-column:span 2}
+    .stats>div:nth-child(5),.stats>div:nth-child(6){grid-column:span 3}
+    .stats>div:nth-child(1){grid-column:1/-1;display:flex;align-items:center;gap:40px}
+    .stats>div:nth-child(1) dt{font-size:clamp(56px,6.4vw,92px);background-size:200% 100%;flex:none}
+    .stats>div:nth-child(1) dd{margin-top:0;font-size:18px;max-width:30em}
+  }
+
+  /* ── AI stack ── */
+  .print-only{display:none}
+  .stack-flow{font-size:clamp(22px,2.6vw,34px);font-weight:620;line-height:1.2;letter-spacing:-.022em;max-width:24em;text-wrap:balance}
+  .stack-flow em{font-style:normal;background:var(--spectrum);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .tools{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px;margin-top:30px}
+  .tools li{grid-column:span 2}
+  .tools li:nth-child(4),.tools li:nth-child(5){grid-column:span 3}
+  .tools li{border:1px solid rgba(255,255,255,.09);border-radius:20px;padding:22px 22px 24px;
+    background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.015))}
+  .tools b{display:block;font-size:21px;font-weight:650;letter-spacing:-.015em}
+  .tools .job{display:block;margin-top:6px;font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;
+    background:var(--spectrum);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .tools p{margin-top:10px;font-size:15px;line-height:1.5;color:var(--ink-2)}
+
+  .work{gap:18px}
+  .work article{position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.09);border-radius:24px;padding:24px 26px 28px;
+    background:linear-gradient(180deg,#141417,#0b0b0d)}
+  .work article::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s;
+    background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgba(255,255,255,.08),transparent 60%)}
+  .work article:hover::before{opacity:1}
+  .work h3{font-size:23px;margin:8px 0 10px}
+
+  .job+.job{border-top-color:rgba(255,255,255,.1)}
+  .foot{border-top:1px solid var(--hair)}
+}
+@media screen and (prefers-reduced-transparency:reduce){
+  .topnav{background:#0c0c0e;-webkit-backdrop-filter:none;backdrop-filter:none}
+}
+
+/* ── narrow screens ───────────────────────────────────── */
+@media screen and (max-width:860px){
+  .sec{grid-template-columns:minmax(0,1fr)}
+  .intro-body{grid-template-columns:minmax(0,1fr) 260px;gap:36px}
+  .sec>h2{margin-bottom:16px}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stats>div:nth-child(1),.stats>div:nth-child(6){grid-column:1/-1}
+  .stats>div:nth-child(1) dt{font-size:56px;background-size:200% 100%}
+  .tools{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tools li,.tools li:nth-child(4),.tools li:nth-child(5){grid-column:auto}
+  .tools li:last-child:nth-child(odd){grid-column:1/-1}
+  .skills{grid-template-columns:minmax(0,1fr)}
+}
+@media screen and (max-width:640px){
+  .page{padding:24px 16px 48px}
+  .hero{min-height:auto;grid-template-columns:116px minmax(0,1fr);grid-template-areas:"name name" "photo meta";gap:28px 16px;align-items:start;padding:76px 0 36px}
+  .hero .name{font-size:clamp(60px,24vw,112px)}
+  .photo{width:116px;padding:4px;border-radius:18px}
+  .photo img{border-radius:14px}
+  .role{font-size:22px;line-height:1.2}
+  .proof{flex-direction:column;gap:3px;font-size:14px;margin-top:10px}
+  .proof span{white-space:normal}
+  .sec{padding:28px 0 44px}
+  .contact{flex-direction:column;gap:6px;font-size:13px}
+  .contact .status{font-size:14.5px}
+  .contact .d-only{display:none}
+  .contact .m-only{display:inline}
+  .contact .pdf{align-self:flex-start}
+  .topnav .hide-sm{display:none}
+  .topnav .links{gap:16px}
+  .intro{padding:10vh 0 8vh}
+  .intro-body{grid-template-columns:minmax(0,1fr);gap:0}
+  .work-photo{max-width:420px;border-radius:22px}
+  .logo-list{gap:22px 32px}
+  .logo-list li{zoom:.86}
+  .net{max-width:420px;gap:28px 12px}
+  .net-frame{border-radius:18px}
+  .net figcaption{font-size:13.5px}
+  .work{grid-template-columns:minmax(0,1fr)}
+  .tools{gap:10px;margin-top:22px}
+  .tools li{padding:14px 14px 16px;border-radius:16px}
+  .tools b{font-size:17px}
+  .tools .job{font-size:10px;letter-spacing:.05em}
+  .tools p{margin-top:8px;font-size:13px;line-height:1.45}
+  .stack-flow{font-size:22px}
+  .stats>div{padding:16px 14px}
+  .stats dt{font-size:25px}
+  .certs{grid-template-columns:minmax(0,1fr)}
+  .row{flex-wrap:wrap;gap:2px 16px}
+  .lede{font-size:17px}
+}
+
+/* ── print: exactly two Letter pages ──────────────────── */
+@page{size:letter;margin:.42in .5in}
+@media print{
+  html,body{background:#fff}
+  body{font-size:8.9pt;line-height:1.38;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .page{max-width:none;padding:0}
+  .screen-only{display:none!important}
+  a{text-decoration:none}
+  /* backstop: whatever motion left behind, paper shows the final state */
+  .page *{opacity:1!important}
+  .hero-meta,.photo,.name,.stats>div,.work article,[data-reveal]{transform:none!important}
+
+  .mast{grid-template-columns:minmax(0,1fr) 1.02in;gap:.3in;padding-bottom:10pt}
+  .name{font-size:36pt}
+  .role{margin-top:5pt;font-size:12.5pt}
+  .contact{margin-top:8pt;font-size:8pt;gap:2pt 14pt}
+
+  .intro{padding:10pt 0 12pt}
+  .statement{font-size:15pt;max-width:none}
+  .lede{margin-top:7pt;font-size:9.3pt;max-width:none}
+  .open{margin-top:7pt;font-size:7.5pt}
+
+  .sec{grid-template-columns:.95in minmax(0,1fr);column-gap:.2in;padding:8pt 0 11pt}
+  .sec>h2{font-size:7.2pt;padding-top:2pt}
+
+  .stats{gap:7pt 16pt}
+  .stats>div{padding-top:5pt}
+  .stats dt{font-size:16pt}
+  .stats dd{margin-top:2pt;font-size:8.3pt}
+  .src{margin-top:3pt;font-size:6.4pt}
+
+  .work{gap:8pt 18pt}
+  .work article{padding-top:6pt}
+  .kind{font-size:6.6pt}
+  .work h3{margin:2pt 0 3pt;font-size:10.4pt}
+  .work p:not(.kind){font-size:8.6pt}
+
+  #experience{break-before:page}
+  .job+.job{margin-top:5pt;padding-top:4pt}
+  .job h3{font-size:11pt}
+  .when{font-size:7.8pt}
+  .title{font-size:9.2pt}
+  .job ul{margin-top:2pt}
+  .job ul+.row{margin-top:6pt}
+  .job li{font-size:8.7pt;padding-left:11pt;text-indent:-11pt}
+  .job li::before{width:11pt}
+  .job li+li{margin-top:.5pt}
+  .results{margin-top:6pt;font-size:8.6pt}
+  .results b{font-size:6.8pt}
+
+  .skills{gap:5pt 16pt}
+  .skills h3{font-size:7pt;margin-bottom:2pt}
+  .skills p,.also{font-size:8.4pt;line-height:1.32}
+  .skills p+p{margin-top:3pt}
+  .lvl{display:inline;margin-right:5pt;font-size:6.4pt}
+
+  .edu{font-size:9pt}
+  .certs{display:block;margin-top:4pt;font-size:8.4pt}
+  .certs li{display:inline}
+  .certs li:not(:last-child)::after{content:"\00a0\00a0·\00a0 ";color:var(--ink-3)}
+  .issued{margin-top:4pt;font-size:6.6pt}
+
+  .foot{display:none}
+  #experience,#skills,#education{padding:6pt 0 7pt}
+  .stats>div,.work article,.job,.skills>div{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<a class="skip screen-only" href="#main">Skip to content</a>
+<nav class="topnav" aria-label="Sections">
+  <a class="brand" href="#top">Devondre Woodard</a>
+  <div class="links">
+    <a class="hide-sm" href="#results">Results</a>
+    <a href="#work">Work</a>
+    <a href="#experience">Experience</a>
+    <a class="hide-sm" href="#skills">Skills</a>
+    <a class="pdf" href="Devondre_Woodard_Portfolio.pdf" download aria-label="Download résumé PDF">PDF</a>
+  </div>
+</nav>
+
+<div class="page">
+
+<header class="mast hero" id="top">
+  <canvas id="name3d" aria-hidden="true"></canvas>
+  <div class="mast-id">
+    <h1 class="name"><span class="w">Devondre </span><span class="w">Woodard</span></h1>
+    <div class="hero-meta">
+      <p class="role">AI Automation &amp; GTM Engineer</p>
+      <p class="proof screen-only"><span><b>17%</b> cold-outreach reply rate</span><span><b>$0.65</b> per Meta conversation</span><span><b>110%</b> of quota at Intuit</span></p>
+      <ul class="contact">
+        <li><a href="mailto:Devondre.M.Woodard@gmail.com">Devondre.M.Woodard@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/devondre-woodard-610952266"><span class="d-only">linkedin.com/in/devondre-woodard-610952266</span><span class="m-only">LinkedIn profile</span></a></li>
+        <li class="print-only"><a href="https://devondrewoodard-web.github.io/devondre-woodard/">devondrewoodard-web.github.io/devondre-woodard</a></li>
+        <li class="status">Remote · U.S. citizen</li>
+        <li class="screen-only"><a class="pdf" href="Devondre_Woodard_Portfolio.pdf" download>Download PDF</a></li>
+      </ul>
+    </div>
+  </div>
+  <figure class="photo">
+    <img src="dre-host.jpg" width="600" height="750" alt="Devondre Woodard in a pinstripe suit, hosting on the microphone">
+  </figure>
+</header>
+
+<section class="intro" id="main" tabindex="-1" aria-label="About">
+  <p class="statement">I build systems that find buyers, start conversations and report what really happened — and I test them like the QA engineer I started as.</p>
+  <div class="intro-body">
+  <div class="intro-text">
+  <p class="lede">Since April 2026 I’ve run growth and automation at InterVision Media, a media and marketing studio: paid acquisition, outbound prospecting, ticketing integrations and the always-on services behind them, built by directing Claude Code. Since October I’ve also reviewed AI model output on contract for Mercor. Before that, two years at Intuit QuickBooks, where I was promoted from Sales Consultant to Account Executive and then moved into QA, and QA engineering at Hertz.</p>
+  <p class="open"><span>Open to</span>GTM&nbsp;Engineer&nbsp;· AI&nbsp;Solutions&nbsp;&amp;&nbsp;Implementation&nbsp;· AI&nbsp;Automation&nbsp;· Growth&nbsp;&amp;&nbsp;MarTech&nbsp;· AI&#8209;enabled&nbsp;QA&nbsp;· Solutions&nbsp;Engineer</p>
+  </div>
+  <figure class="work-photo screen-only">
+    <img src="dre-at-work.jpg" width="720" height="900" loading="lazy" alt="Devondre Woodard working at his computer setup">
+  </figure>
+  </div>
+</section>
+
+<section class="sec logos screen-only" id="companies" aria-label="Companies">
+  <h2>Companies</h2>
+  <div class="logo-rows">
+    <div class="logo-row">
+      <p class="logo-label">Worked at</p>
+      <ul class="logo-list">
+        <li><img class="lg f-inv" style="height:34px" loading="lazy" src="logos/intuit-quickbooks.svg" alt="Intuit QuickBooks"></li>
+        <li><img class="lg f-white" style="height:26px" loading="lazy" src="logos/hertz.svg" alt="Hertz"></li>
+        <li class="lg-word"><img class="lg f-bright" style="height:24px" loading="lazy" src="logos/mercor.svg" alt="Mercor"><span aria-hidden="true">Mercor</span></li>
+        <li class="lg-word"><img class="lg f-bright blend" style="height:36px" loading="lazy" src="logos/intervision-emblem.png" alt="InterVision Media"><span aria-hidden="true">InterVision Media</span></li>
+      </ul>
+    </div>
+    <div class="logo-row">
+      <p class="logo-label">Clients &amp; partners</p>
+      <ul class="logo-list">
+        <li><img class="lg f-white" style="height:42px" loading="lazy" src="logos/leopard.png" alt="Leopard Beach Resort &amp; Spa"></li>
+        <li><img class="lg f-white" style="height:50px" loading="lazy" src="logos/shitaye.svg" alt="Shitaye Suite Hotel"></li>
+        <li><img class="lg f-white" style="height:32px" loading="lazy" src="logos/unity.png" alt="Unity Microfinance"></li>
+        <li class="lg-word"><img class="lg f-invc blend" style="height:34px" loading="lazy" src="logos/easy-equb.png" alt="Easy Equb"><span aria-hidden="true">Easy Equb</span></li>
+        <li><img class="lg f-white" style="height:26px" loading="lazy" src="logos/reportage.svg" alt="Reportage Towers"></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="results">
+  <h2>Results</h2>
+  <dl class="stats">
+    <div>
+      <dt data-count>17%</dt>
+      <dd>reply rate on cold outreach: 58 of 340 hotels and resorts contacted<span class="src">Cold first messages · any reply · Nov 2026</span></dd>
+    </div>
+    <div>
+      <dt data-count>54</dt>
+      <dd>ticket purchases tracked from Meta ads, at about $1.30 of ad spend each<span class="src">Meta Marketing API</span></dd>
+    </div>
+    <div>
+      <dt data-count>$0.65</dt>
+      <dd>average cost per messaging conversation, 1,678 started<span class="src">Meta Marketing API</span></dd>
+    </div>
+    <div>
+      <dt data-count>625,882</dt>
+      <dd>people reached on Meta, April–November 2026<span class="src">Meta Marketing API</span></dd>
+    </div>
+    <div>
+      <dt data-count>$543,256</dt>
+      <dd>in revenue over six months<span class="src">Intuit QuickBooks</span></dd>
+    </div>
+    <div>
+      <dt data-count>110%</dt>
+      <dd>of quota, on 250 B2B calls a day<span class="src">Intuit QuickBooks</span></dd>
+    </div>
+  </dl>
+</section>
+
+<section class="sec" id="work">
+  <h2>Selected work</h2>
+  <div class="work">
+    <article data-tilt>
+      <p class="kind">GTM engineering</p>
+      <h3>Outbound prospecting pipeline</h3>
+      <p>Research, a 100-point lead score and personalised outreach for 506 hotels and resorts across 21 markets. Each lead names the person who can say yes and grades every contact route by how it was verified.</p>
+    </article>
+    <article data-tilt>
+      <p class="kind">Paid growth</p>
+      <h3>Meta acquisition, April–November 2026</h3>
+      <p>1,678 messaging conversations and 36,366 link clicks on $1,092 in spend. For partner Easy Equb’s app launch: 75,724 reached, 6,795 link clicks and 435 conversations on $57.</p>
+    </article>
+    <article data-tilt>
+      <p class="kind">Integration</p>
+      <h3>Ticket sync for a 300-seat event</h3>
+      <p>A bridge that syncs sales across two ticketing storefronts so each price tier’s cap counts combined sales, with a Telegram alert on every sale. The paid campaign drove 54 tracked purchases at about $1.30 each.</p>
+    </article>
+    <article data-tilt>
+      <p class="kind">AI tooling</p>
+      <h3>Premiere Pro MCP server</h3>
+      <p>Gives an LLM 269 tools across 29 modules inside Adobe Premiere Pro. An edit-planning layer previews the whole change set before anything touches a timeline.</p>
+    </article>
+    <article data-tilt>
+      <p class="kind">AI operations</p>
+      <h3>14 services and scheduled jobs</h3>
+      <p>A Telegram-to-Claude operations bridge, weekly Meta reporting, ticket-sale alerts and social publishing, running unattended across a Linux VPS and macOS.</p>
+    </article>
+    <article data-tilt>
+      <p class="kind">AI quality</p>
+      <h3>Job-search engine with a claim linter</h3>
+      <p>Pulls postings from Greenhouse, Lever and Ashby, scores each against a rubric with an LLM, filters scams with fixed rules, and blocks any generated résumé line whose number isn’t in a verified bank. Node.js, SQLite, Claude API, systemd; 100 unit tests.</p>
+    </article>
+  </div>
+</section>
+
+<section class="sec screen-only" id="ai" aria-label="How I work with AI">
+  <h2>AI stack</h2>
+  <div>
+    <p class="stack-flow" data-reveal><em>Claude Code</em> builds it. <em>Codex</em> argues with it. <em>Higgsfield</em> and <em>Muse</em> make the video and images. <em>Gemini</em> makes images and translates Amharic. <em>Grok</em> writes the prompts.</p>
+    <ul class="tools">
+      <li data-reveal><b>Claude Code</b><span class="job">Builds and runs the systems</span><p>The prospecting pipeline, ticket sync, 14 services and scheduled jobs, and the Premiere Pro MCP server.</p></li>
+      <li data-reveal><b>Codex</b><span class="job">Second opinion · images</span><p>An independent reviewer that challenges Claude’s work, and an image generator.</p></li>
+      <li data-reveal><b>Higgsfield + Muse</b><span class="job">AI video · images</span><p>Higgsfield makes the video and hero shots for ads; Muse makes images and video alongside it.</p></li>
+      <li data-reveal><b>Gemini</b><span class="job">Images · Amharic</span><p>Creates images, and translates Amharic, which other platforms struggle with.</p></li>
+      <li data-reveal><b>Grok bot</b><span class="job">Image and video prompts</span><p>Drafts the prompts the image and video tools run on.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec" id="experience">
+  <h2>Experience</h2>
+  <div>
+    <article class="job" data-reveal>
+      <div class="row"><h3>Mercor</h3><p class="when">Oct 2026 – Present</p></div>
+      <p class="title">AI Review Implementation (Contract) · Remote</p>
+      <ul>
+        <li>Review and evaluate AI model outputs against detailed rubrics for an AI implementation project, flagging factual, logic and instruction-following errors.</li>
+        <li>Apply QA defect-triage discipline to AI output: classify failure patterns and document them clearly enough that model and workflow fixes can be targeted.</li>
+      </ul>
+    </article>
+
+    <article class="job" data-reveal>
+      <div class="row"><h3>InterVision Media</h3><p class="when">Apr 2026 – Present</p></div>
+      <p class="title">AI Automation &amp; GTM Engineer · Remote</p>
+      <ul>
+        <li>Built the outbound pipeline behind a 17% cold reply rate; ran Meta ads at about $0.65 per conversation.</li>
+        <li>Event management for partner Unity Microfinance’s launch on 10 November 2026, planned for 200 guests, after an AI-generated video teaser campaign.</li>
+        <li>Commercial films for hotel clients Leopard Beach Resort and Shitaye Suite Hotel, and a launch ad for partner Reportage Towers.</li>
+      </ul>
+    </article>
+
+    <article class="job" data-reveal>
+      <div class="row"><h3>Intuit QuickBooks</h3><p class="when">Feb 2024 – Apr 2026</p></div>
+      <div class="row"><p class="title">QA Analyst (Web &amp; SaaS Applications)</p><p class="when">Jan 2026 – Apr 2026</p></div>
+      <ul>
+        <li>Led manual testing for vended SaaS and web applications integrated with QuickBooks Online and Salesforce; cut regression cycle time 40%.</li>
+        <li>Developed and maintained structured test cases for functional, regression and UAT cycles, using Azure DevOps for traceability and defect tracking; ran cross-browser, desktop and mobile UI/UX validation.</li>
+      </ul>
+      <div class="row"><p class="title">Account Executive</p><p class="when">Oct 2024 – Jan 2026</p></div>
+      <ul>
+        <li>Consultative discovery with accountants and business owners to match QuickBooks products to business need; qualified inbound and outbound pipeline via BANT.</li>
+        <li>$150K new recurring revenue · $80K/month upsell · +18% Salesforce conversions.</li>
+      </ul>
+      <div class="row"><p class="title">Sales Consultant</p><p class="when">Feb 2024 – Oct 2024</p></div>
+      <ul>
+        <li>Promoted to Account Executive in October 2024.</li>
+      </ul>
+      <p class="results"><b>Sales results</b>$543,256 in revenue over six months · 110% of quota · 250 B2B calls a day · 20,000 leads qualified via BANT</p>
+    </article>
+
+    <article class="job" data-reveal>
+      <div class="row"><h3>Hertz</h3><p class="when">Mar 2022 – Jan 2024</p></div>
+      <p class="title">QA Engineer (Vended &amp; API Applications)</p>
+      <ul>
+        <li>Performed manual and automation-supported testing for enterprise vended systems and APIs.</li>
+        <li>Designed test plans and scripts for end-to-end validation; executed functional, regression, integration and data-layer testing across high-traffic systems.</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="sec" id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div data-reveal>
+      <h3>AI &amp; automation</h3>
+      <p><span class="lvl">Core</span>Claude Code, Claude API, MCP servers, Meta Marketing API, rubric and prompt design</p>
+      <p><span class="lvl">Familiar</span>Node.js, SQLite, REST API integration, n8n, Linux and systemd, ETL pipelines, Whisper transcription</p>
+    </div>
+    <div data-reveal>
+      <h3>GTM &amp; growth</h3>
+      <p><span class="lvl">Core</span>Meta Ads, Meta Pixel conversion tracking, lead research and scoring, outbound personalisation, consultative discovery, BANT qualification, Salesforce</p>
+    </div>
+    <div data-reveal>
+      <h3>QA &amp; testing</h3>
+      <p><span class="lvl">Core</span>Manual, functional and regression testing, UAT, cross-browser and mobile, API testing with Postman, SQL, defect triage, test documentation, Azure DevOps, Jira</p>
+      <p><span class="lvl">Familiar</span>Selenium, Playwright, REST-Assured</p>
+    </div>
+    <p class="also" data-reveal><span class="lvl">Also</span>Adobe Premiere Pro, audio editing and cleanup, Remotion</p>
+    <p class="also print-only"><span class="lvl">AI stack</span>Claude Code builds · Codex reviews and makes images · Higgsfield and Muse make video and images · Gemini makes images, translates Amharic · Grok bot writes prompts</p>
+  </div>
+</section>
+
+<section class="sec" id="education">
+  <h2>Education</h2>
+  <div data-reveal>
+    <p class="edu"><b>BA, Business Management</b> — University of Texas at Arlington, expected 2027</p>
+    <ul class="certs">
+      <li>Generative AI with LLMs <span>— DeepLearning.AI</span></li>
+      <li>Prompt Engineering for ChatGPT <span>— Vanderbilt University</span></li>
+      <li>Introduction to Generative AI – Art of the Possible <span>— AWS</span></li>
+      <li>AI Fundamentals for Non-Data Scientists <span>— University of Pennsylvania</span></li>
+      <li>Introduction to AI <span>— University of Helsinki &amp; MinnaLearn</span></li>
+    </ul>
+    <p class="issued">Certifications issued November 2025</p>
+  </div>
+</section>
+
+<section class="sec network screen-only" id="network" aria-label="Network">
+  <h2>Network</h2>
+  <div class="net">
+    <figure class="net-photo wide">
+      <div class="net-frame"><img src="dre-ac3-networking.jpg" width="1160" height="725" loading="lazy" alt="Devondre Woodard in conversation with a guest at Addis Connect 3.0"></div>
+      <figcaption><b>Addis Connect</b>The professional networking events I host. Here at 3.0; the 300-seat event under Selected work was 4.0.</figcaption>
+    </figure>
+    <figure class="net-photo">
+      <div class="net-frame"><img src="dre-mixercloud.jpg" width="440" height="550" loading="lazy" alt="Devondre Woodard at a MixerCloud event"></div>
+      <figcaption><b>MixerCloud</b>A network for technology professionals</figcaption>
+    </figure>
+    <figure class="net-photo">
+      <div class="net-frame"><img src="dre-ac2-interview.jpg" width="600" height="750" loading="lazy" alt="Devondre Woodard interviewing a guest at Addis Connect 2.0"></div>
+      <figcaption><b>Addis Connect 2.0</b>Interviewing a guest at The Alchemist</figcaption>
+    </figure>
+  </div>
+</section>
+
+<footer class="foot">
+  <p>Devondre Woodard · <a href="mailto:Devondre.M.Woodard@gmail.com">Devondre.M.Woodard@gmail.com</a></p>
+  <p>Updated November 2026</p>
+</footer>
+
+</div>
+<script defer src="js/vendor/gsap.min.js"></script>
+<script defer src="js/vendor/ScrollTrigger.min.js"></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
